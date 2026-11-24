@@ -1,0 +1,30 @@
+name: bootstrap-site
+on:
+  push:
+    paths:
+      - '.github/workflows/bootstrap.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: fetch app package
+        run: |
+          curl -fL --retry 3 -o /tmp/app.zip "https://aka.doubaocdn.com/s/IQigZBAkv8"
+          mkdir -p /tmp/app && unzip -q /tmp/app.zip -d /tmp/app
+          ls /tmp/app
+      - name: sync to site root
+        run: |
+          rsync -a --delete --exclude '.git' --exclude '.github' /tmp/app/buick-quote-tool/ ./
+          touch .nojekyll
+          ls -la
+      - name: commit and push
+        run: |
+          git config user.name "Mz-ai527"
+          git config user.email "Mz-ai527@users.noreply.github.com"
+          git add -A
+          git commit -m "deploy: 别克落地价计算器（沧州版）" || echo "nothing to commit"
+          git push
