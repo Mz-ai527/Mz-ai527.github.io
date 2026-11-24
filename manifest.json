@@ -1,0 +1,26 @@
+{
+  "name": "别克购车落地价计算器",
+  "short_name": "别克落地价",
+  "description": "别克车型落地价核算与多店报价对比工具，内置河北2026以旧换新补贴口径，支持购置税、保险拆分、贷款方案和本地记录。",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

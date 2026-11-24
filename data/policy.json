@@ -1,0 +1,71 @@
+{
+  "id": "hebei-cangzhou-2026",
+  "name": "河北省2026年购车及以旧换新补贴口径",
+  "version": "hebei-2026-v1",
+  "updatedAt": "2026-11-24",
+  "effectiveFrom": "2026-01-01",
+  "effectiveTo": "2026-12-31",
+  "lastVerifiedAt": "2026-11-24",
+  "region": "河北省（沧州适用）",
+  "scope": "河北省2026年汽车报废更新、置换更新补贴口径。补贴按新车销售价格（含税）计算，金额向上取整至整元；报废与置换二选一，每位个人消费者每年只能享受一次；新车发票及登记须在河北省内开具或办理。具体额度、名额和申报端口以河北省商务厅及各市当期公告为准。",
+  "sources": [
+    {
+      "name": "河北省人民政府（2026年以旧换新工作）",
+      "url": "https://www.hebei.gov.cn/columns/580d0301-2e0b-4152-9dd1-7d7f4e0f4980/202601/05/c63adfe0-8f91-4b8c-8220-3f071e97bc98.html"
+    },
+    {
+      "name": "河北省发展和改革委员会（2026年以旧换新实施方案）",
+      "url": "https://hbdrc.hebei.gov.cn/ztzl/sbgxyjhx/sjzc/202609/t20260911_139224.html"
+    },
+    {
+      "name": "国家税务总局",
+      "url": "https://www.chinatax.gov.cn/"
+    },
+    {
+      "name": "工业和信息化部（减免车辆购置税的新能源汽车车型目录）",
+      "url": "https://www.miit.gov.cn/"
+    }
+  ],
+  "vat": {
+    "defaultRate": 13
+  },
+  "purchaseTax": {
+    "rate": 0.1,
+    "nevDiscount": {
+      "rate": 0.05,
+      "cap": 15000
+    }
+  },
+  "tradeIn": {
+    "ownershipCutoff": "2025-01-08",
+    "oldCarDeadline": {
+      "gas": "2013-06-30",
+      "diesel": "2015-06-30",
+      "nev": "2019-12-31"
+    },
+    "scrap": {
+      "nev": {
+        "rate": 0.12,
+        "cap": 20000,
+        "label": "报废+新能源"
+      },
+      "fuelLe2": {
+        "rate": 0.1,
+        "cap": 15000,
+        "label": "报废+燃油(≤2L)"
+      }
+    },
+    "swap": {
+      "nev": {
+        "rate": 0.08,
+        "cap": 15000,
+        "label": "置换+新能源"
+      },
+      "fuelLe2": {
+        "rate": 0.06,
+        "cap": 13000,
+        "label": "置换+燃油(≤2L)"
+      }
+    }
+  }
+}
